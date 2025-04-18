@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdbool.h>
+
 /*Se reciben dos numeros y un simbolo de
 operador aritmetico como parámetro. Se
 devuelve la operación entre ambos números.*/
@@ -21,7 +23,12 @@ int main(){
         resultado = A - B;
         break;
         case '/':
+        if (B == 0){
+            printf("No se puede dividir por cero.");
+        }
+        else{
         resultado = A / B;
+        }
         break;
         case '*':
         resultado = A * B;
@@ -30,6 +37,9 @@ int main(){
         resultado = 0;
         break;
     }
-printf("El resultado es %6.2f", resultado);
+bool div_cero = (operacion=='/' && B==0);
+if (!div_cero){
+    printf("El resultado es %6.2f", resultado);
+}
 return 0;
 }
