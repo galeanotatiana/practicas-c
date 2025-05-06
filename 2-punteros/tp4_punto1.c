@@ -11,21 +11,10 @@ salida: retornar 0 si finalizó correctamente*/
 
 #include <stdio.h>
 
-int calculos(int n1, int n2, int suma, int resta, int prod){
-    int *p_suma, *p_resta, *p_prod;      /*Declaro punteros a enteros*/
-    p_suma = &suma;                      /*Asigno la direccion de memoria de "suma" al puntero p_suma*/
-    *p_suma = n1 + n2;                   /*Modifico la variable "suma" desde el puntero*/
-
-    p_resta = &resta;
-    *p_resta = n1 - n2;
-
-    p_prod = &prod;
-    *p_prod = n1 * n2;
-
-    printf("Valor de suma: %i\n", suma);
-    printf("Valor de resta: %i\n", resta);
-    printf("Valor de prod: %i\n", prod);       /*Hasta acá funciona bien*/
-
+int calculos(int n1, int n2, int *suma, int *resta, int *prod){
+    *suma = n1 + n2;
+    *resta = n1 - n2;
+    *prod = n1 * n2;
     return 0;
 }
 
@@ -33,17 +22,17 @@ int calculos(int n1, int n2, int suma, int resta, int prod){
 Validar que las variables de cuentas se hayan modificado*/
 
 int main(){
-    int n1 = 5;                          /*Declaro variables enteras con los numeros*/
+    int n1 = 5;                          
     int n2 = 2;
-    int suma=0, resta=0, producto=0;     /*Declaro variables enteras para las operaciones*/
+    int suma=0, resta=0, producto=0;     
 
     printf("Las variables antes de ejecutar la función\n");
     printf("Suma = %i, resta = %i, producto = %i\n", suma, resta, producto);
 
-    calculos(n1, n2, suma, resta, producto); /* El ejemplo decia usar &suma, &resta, &producto*/
+    calculos(n1, n2, &suma, &resta, &producto); /* El ejemplo decia usar &suma, &resta, &producto*/
 
-    /* printf("Las variables despues de ejecutar la función\n");
-    printf("Suma = %i, resta = %i, producto = %i\n", suma, resta, producto); */ /*Esta parte devuelve todos en 0 ¿?*/
+    printf("Las variables despues de ejecutar la función\n");
+    printf("Suma = %i, resta = %i, producto = %i\n", suma, resta, producto);
 
     return 0;
 }
