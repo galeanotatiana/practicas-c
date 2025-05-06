@@ -25,5 +25,26 @@ void suma_diagonal(int M[F][C]){
     for (int i=0; i<F; i++){
         suma = suma + M[i][i];
     }
-    printf("%i, suma);
+    printf("La suma de la diagonal principal es %i\n", suma);
+}
+
+void pares_impares(int M[F][C]){
+    int i=0, j=0, sum=0;
+    for (i=0; i<F; i+=2){ /*filas pares, empieza en 0 y se va sumando 2*/
+        for (j=1; j<C; j+=2){ /*columnas impares, empieza en 1 y se va sumando 2*/
+            sum += M[i][j];
+        }
+    }
+    printf("La suma de las filas pares con las columnas impares es: %i",sum);
+}
+
+int main(){
+    srand(time(NULL));
+    int M[F][C];
+    int min = 1;
+    int max = 10;
+    matriz_aleatorios(M,min,max);
+    suma_diagonal(M);
+    pares_impares(M);
+    return 0;
 }
