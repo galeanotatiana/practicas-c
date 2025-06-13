@@ -28,8 +28,6 @@ ingresando por teclado los datos e imprimiendo luego en pantalla.*/
 void ingresar_imprimir(struct alumno alum[], int cantidad){
     /*Diferencia importante: "alumno" es el tipo de dato, "alum" es el nombre de un vector de estructuras*/
     char leg[7];
-    float prom;
-    int ing;
     /*Ingreso de datos*/
     for (int i=0;i<cantidad;i++){
         printf("Ingrese el legajo del alumno %i: ", i+1);
