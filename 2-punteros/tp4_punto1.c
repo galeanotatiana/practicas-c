@@ -26,13 +26,15 @@ int main(){
     int n2 = 2;
     int suma=0, resta=0, producto=0;     
 
-    printf("Las variables antes de ejecutar la función\n");
+    printf("Variables:\n");
     printf("Suma = %i, resta = %i, producto = %i\n", suma, resta, producto);
 
-    calculos(n1, n2, &suma, &resta, &producto); /* El ejemplo decia usar &suma, &resta, &producto*/
+    calculos(n1, n2, &suma, &resta, &producto);
 
-    printf("Las variables despues de ejecutar la función\n");
-    printf("Suma = %i, resta = %i, producto = %i\n", suma, resta, producto);
-
+    /*Validación*/
+    if (suma == n1+n2 && resta == n1-n2 && producto == n1*n2){
+        printf("Las variables despues de ejecutar la función:\n");
+        printf("Suma = %i, resta = %i, producto = %i\n", suma, resta, producto);
+    }
     return 0;
 }
