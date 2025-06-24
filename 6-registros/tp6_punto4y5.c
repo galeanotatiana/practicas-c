@@ -35,7 +35,7 @@ void cargar_artistas(struct musico artistas[], int cantidad){
         printf("\n Ingrese la cantidad de discos del artista %i: \n", i+1);
         scanf("%i", &artistas[i].albumes);
         getchar();
-        for (int j; j<artistas[i].albumes; j++){
+        for (int j=0; j<artistas[i].cantidadAlbumes; j++){
             printf("\nIngrese el titulo del disco numero %i: \n", j+1);
             scanf(" %19[^\n]", artistas[i].albumes[j].titulo);
 

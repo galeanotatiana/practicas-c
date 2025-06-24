@@ -1,0 +1,1 @@
+El numero ingresado fue: 12
