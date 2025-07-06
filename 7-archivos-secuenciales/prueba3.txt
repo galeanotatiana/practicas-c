@@ -1,1 +1,1 @@
-El numero ingresado fue: 12
+El numero ingresado fue: 23

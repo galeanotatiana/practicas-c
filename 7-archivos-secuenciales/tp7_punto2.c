@@ -27,6 +27,7 @@ int main(){
     while (fgets(aux,100,f)!=NULL){
         printf("%s",aux);
     }
+    /*Hago el comentario solo para probar el commit*/
     fclose(f);
     return 0;
 }
