@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "../libs/listas/headers/listas.h"
+#include "...\libs\listas\headers\listas.h"
 
 Lista Factorizacion(int n);
 
