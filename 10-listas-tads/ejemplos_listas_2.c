@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-// #include "listas.h"
-// #include "tipo_elemento.h"
 #include "../libs/listas/headers/listas.h"
 #include "../libs/tipoElemento/headers/tipo_elemento.h"
 
